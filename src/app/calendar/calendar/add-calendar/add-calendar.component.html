@@ -1,0 +1,29 @@
+<div style="font-size: 18px">
+    <label>Name</label>
+    <div>
+        <input type="text" [(ngModel)]="Name" placeholder="Enter name">
+    </div>
+
+    <label>Type</label>
+    <div>
+        <input type="text"[(ngModel)]="Description" placeholder="Enter description">
+    </div>
+
+    <label>Time</label>
+    <div>
+        <input type="text" [(ngModel)]="Time" placeholder="Enter time">
+    </div>
+
+    <label>Frequency</label>
+    <div>
+        <input type="text" [(ngModel)]="Frequency" placeholder="Enter frequency">
+    </div>
+</div>
+
+<button (click)="addEvent()" *ngIf="event.id == 0">
+    Add
+</button>
+
+<button (click)="updateEvent()" *ngIf="event.id != 0">
+    Update
+</button>
